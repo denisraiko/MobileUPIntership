@@ -30,7 +30,6 @@ class MainViewController: UIViewController {
         view.backgroundColor = .white
         navigationItem.titleView = segmentedControl
         
-        // Добавляем контейнер для контента
         addChild(photoViewController)
         addChild(videoViewController)
         

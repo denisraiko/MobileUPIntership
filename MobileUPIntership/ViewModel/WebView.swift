@@ -73,8 +73,9 @@ class WebView: UIViewController, WKNavigationDelegate {
 
     private func navigateToMainScreen() {
         let mainViewController = MainViewController()
-        mainViewController.modalPresentationStyle = .fullScreen
-        present(mainViewController, animated: true, completion: nil)
+        let navigationController = UINavigationController(rootViewController: mainViewController)
+        navigationController.modalPresentationStyle = .fullScreen
+        present(navigationController, animated: true, completion: nil)
     }
 }
 
