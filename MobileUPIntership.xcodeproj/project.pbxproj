@@ -9,20 +9,21 @@
 /* Begin PBXBuildFile section */
 		3BCD62922C6DDA2C00D35516 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCD62912C6DDA2C00D35516 /* AppDelegate.swift */; };
 		3BCD62942C6DDA2C00D35516 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCD62932C6DDA2C00D35516 /* SceneDelegate.swift */; };
-		3BCD62962C6DDA2C00D35516 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCD62952C6DDA2C00D35516 /* AuthViewController.swift */; };
+		3BCD62962C6DDA2C00D35516 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCD62952C6DDA2C00D35516 /* WebView.swift */; };
 		3BCD62992C6DDA2C00D35516 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 3BCD62982C6DDA2C00D35516 /* Base */; };
 		3BCD629B2C6DDA2D00D35516 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BCD629A2C6DDA2D00D35516 /* Assets.xcassets */; };
 		3BCD629E2C6DDA2D00D35516 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 3BCD629D2C6DDA2D00D35516 /* Base */; };
 		3BCD62F12C6E070300D35516 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCD62F02C6E070300D35516 /* MainTabBarController.swift */; };
 		3BCD62F32C6E072100D35516 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCD62F22C6E072100D35516 /* PhotoViewController.swift */; };
 		3BCD62F52C6E072C00D35516 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCD62F42C6E072C00D35516 /* VideoViewController.swift */; };
+		3BCD62F72C6E0AE100D35516 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCD62F62C6E0AE100D35516 /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3BCD628E2C6DDA2C00D35516 /* MobileUPIntership.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileUPIntership.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BCD62912C6DDA2C00D35516 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BCD62932C6DDA2C00D35516 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3BCD62952C6DDA2C00D35516 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		3BCD62952C6DDA2C00D35516 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		3BCD62982C6DDA2C00D35516 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3BCD629A2C6DDA2D00D35516 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3BCD629D2C6DDA2D00D35516 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -30,6 +31,7 @@
 		3BCD62F02C6E070300D35516 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainTabBarController.swift; path = "../../../../../../.Trash/MobileUPIntership 12-15-44-734/MobileUPIntership/View/MainTabBarController.swift"; sourceTree = "<group>"; };
 		3BCD62F22C6E072100D35516 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhotoViewController.swift; path = "../../../../../../.Trash/MobileUPIntership 12-15-44-734/MobileUPIntership/View/PhotoViewController.swift"; sourceTree = "<group>"; };
 		3BCD62F42C6E072C00D35516 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VideoViewController.swift; path = "../../../../../../.Trash/MobileUPIntership 12-15-44-734/MobileUPIntership/View/VideoViewController.swift"; sourceTree = "<group>"; };
+		3BCD62F62C6E0AE100D35516 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = File.swift; path = ../../../../File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +80,8 @@
 		3BCD62ED2C6DFFDD00D35516 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				3BCD62952C6DDA2C00D35516 /* AuthViewController.swift */,
+				3BCD62952C6DDA2C00D35516 /* WebView.swift */,
+				3BCD62F62C6E0AE100D35516 /* File.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -171,8 +174,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BCD62962C6DDA2C00D35516 /* AuthViewController.swift in Sources */,
+				3BCD62962C6DDA2C00D35516 /* WebView.swift in Sources */,
 				3BCD62922C6DDA2C00D35516 /* AppDelegate.swift in Sources */,
+				3BCD62F72C6E0AE100D35516 /* File.swift in Sources */,
 				3BCD62F52C6E072C00D35516 /* VideoViewController.swift in Sources */,
 				3BCD62F12C6E070300D35516 /* MainTabBarController.swift in Sources */,
 				3BCD62942C6DDA2C00D35516 /* SceneDelegate.swift in Sources */,
