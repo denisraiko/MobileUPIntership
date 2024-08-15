@@ -8,7 +8,7 @@
 import UIKit
 import WebKit
 
-class AuthViewController: UIViewController, WKNavigationDelegate {
+class WebView: UIViewController, WKNavigationDelegate {
     private var webView: WKWebView!
 
     override func viewDidLoad() {
