@@ -17,6 +17,10 @@
 		3BCD62FC2C6E0CBD00D35516 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCD62FB2C6E0CBD00D35516 /* PhotoViewController.swift */; };
 		3BCD62FE2C6E0CCC00D35516 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCD62FD2C6E0CCC00D35516 /* VideoViewController.swift */; };
 		3BCD63002C6E115800D35516 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCD62FF2C6E115800D35516 /* WelcomeViewController.swift */; };
+		3BCD63022C6E53FF00D35516 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCD63012C6E53FF00D35516 /* Photo.swift */; };
+		3BCD63042C6E555000D35516 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCD63032C6E555000D35516 /* PhotoDetailViewController.swift */; };
+		3BCD63062C6E578200D35516 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCD63052C6E578200D35516 /* PhotoCell.swift */; };
+		3BCD63082C6E64D200D35516 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCD63072C6E64D200D35516 /* ImageCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		3BCD62FB2C6E0CBD00D35516 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		3BCD62FD2C6E0CCC00D35516 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		3BCD62FF2C6E115800D35516 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		3BCD63012C6E53FF00D35516 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		3BCD63032C6E555000D35516 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		3BCD63052C6E578200D35516 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		3BCD63072C6E64D200D35516 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,10 +88,8 @@
 		3BCD62ED2C6DFFDD00D35516 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				3BCD62FF2C6E115800D35516 /* WelcomeViewController.swift */,
-				3BCD62952C6DDA2C00D35516 /* WebView.swift */,
-				3BCD62F82C6E0C9400D35516 /* MainViewController.swift */,
 				3BCD62FB2C6E0CBD00D35516 /* PhotoViewController.swift */,
+				3BCD63032C6E555000D35516 /* PhotoDetailViewController.swift */,
 				3BCD62FD2C6E0CCC00D35516 /* VideoViewController.swift */,
 			);
 			path = ViewModel;
@@ -92,6 +98,10 @@
 		3BCD62EE2C6DFFEB00D35516 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3BCD62FF2C6E115800D35516 /* WelcomeViewController.swift */,
+				3BCD62952C6DDA2C00D35516 /* WebView.swift */,
+				3BCD62F82C6E0C9400D35516 /* MainViewController.swift */,
+				3BCD63052C6E578200D35516 /* PhotoCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -99,6 +109,8 @@
 		3BCD62EF2C6DFFEF00D35516 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3BCD63012C6E53FF00D35516 /* Photo.swift */,
+				3BCD63072C6E64D200D35516 /* ImageCache.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -174,11 +186,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BCD63082C6E64D200D35516 /* ImageCache.swift in Sources */,
+				3BCD63022C6E53FF00D35516 /* Photo.swift in Sources */,
 				3BCD62962C6DDA2C00D35516 /* WebView.swift in Sources */,
 				3BCD62922C6DDA2C00D35516 /* AppDelegate.swift in Sources */,
 				3BCD62FE2C6E0CCC00D35516 /* VideoViewController.swift in Sources */,
 				3BCD62942C6DDA2C00D35516 /* SceneDelegate.swift in Sources */,
 				3BCD62F92C6E0C9400D35516 /* MainViewController.swift in Sources */,
+				3BCD63062C6E578200D35516 /* PhotoCell.swift in Sources */,
+				3BCD63042C6E555000D35516 /* PhotoDetailViewController.swift in Sources */,
 				3BCD62FC2C6E0CBD00D35516 /* PhotoViewController.swift in Sources */,
 				3BCD63002C6E115800D35516 /* WelcomeViewController.swift in Sources */,
 			);

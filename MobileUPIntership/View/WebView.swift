@@ -43,7 +43,7 @@ class WebView: UIViewController, WKNavigationDelegate {
             URLQueryItem(name: "display", value: "mobile"),
             URLQueryItem(name: "scope", value: "photos,video"),
             URLQueryItem(name: "response_type", value: "token"),
-            URLQueryItem(name: "v", value: "5.131")
+            URLQueryItem(name: "v", value: "5.199")
         ]
         if let authURL = urlComponent.url {
             let request = URLRequest(url: authURL)
