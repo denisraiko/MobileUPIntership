@@ -34,6 +34,9 @@ class PhotoViewController: UIViewController {
 
         setupCollectionView()
         loadAlbums()
+        
+        
+
     }
 
     private func setupCollectionView() {
@@ -139,6 +142,8 @@ extension PhotoViewController: UICollectionViewDelegate, UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let photo = photos[indexPath.item]
         let detailVC = PhotoDetailViewController(photo: photo)
+        
+
         navigationController?.pushViewController(detailVC, animated: true)
     }
 }

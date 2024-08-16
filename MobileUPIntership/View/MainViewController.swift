@@ -28,6 +28,9 @@ class MainViewController: UIViewController {
         setupSegmentControl()
         setupUI()
         setupNavigationBar()
+        
+        
+        
     }
     
     private func setupNavigationBar() {

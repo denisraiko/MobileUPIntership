@@ -10,7 +10,8 @@ import UIKit
 class PhotoDetailViewController: UIViewController {
     private let photo: Photo
     private let imageView = UIImageView()
-    
+    private var image: UIImage?
+
     init(photo: Photo) {
         self.photo = photo
         super.init(nibName: nil, bundle: nil)
@@ -24,18 +25,11 @@ class PhotoDetailViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         loadImage()
-        
-        navigationItem.rightBarButtonItems = [
-            UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareTapped)),
-            UIBarButtonItem(title: "Сохранить", style: .plain, target: self, action: #selector(saveImageTapped))
-        ]
-        
+        setupNavigationBar()
     }
     
     private func setupUI() {
         title = DateFormatter.localizedString(from: photo.date, dateStyle: .medium, timeStyle: .none)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareTapped))
-        
         view.backgroundColor = .white
         view.addSubview(imageView)
         imageView.contentMode = .scaleAspectFit
@@ -49,34 +43,49 @@ class PhotoDetailViewController: UIViewController {
         ])
     }
     
+    private func setupNavigationBar() {
+        navigationController?.navigationBar.tintColor = .black
+        
+        let shareButton = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareTapped))
+        navigationItem.rightBarButtonItem = shareButton
+        
+        let backButton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+    }
+    
     private func loadImage() {
-        if let url = URL(string: photo.url) {
-            URLSession.shared.dataTask(with: url) { [weak self] data, _, _ in
-                if let data = data, let image = UIImage(data: data) {
-                    DispatchQueue.main.async {
-                        self?.imageView.image = image
-                    }
-                }
-            }.resume()
-        }
+        guard let url = URL(string: photo.url) else { return }
+        URLSession.shared.dataTask(with: url) { [weak self] data, _, _ in
+            guard let data = data, let image = UIImage(data: data) else { return }
+            DispatchQueue.main.async {
+                self?.imageView.image = image
+                self?.image = image
+            }
+        }.resume()
     }
     
     @objc private func shareTapped() {
-        guard let image = imageView.image else { return }
+        guard let image = image else { return }
         
         let activityVC = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        
+        activityVC.completionWithItemsHandler = { [weak self] activityType, completed, _, error in
+            if completed {
+                if activityType == nil || activityType == .saveToCameraRoll {
+                    self?.showAlert(title: "Сохранено!", message: "Изображение успешно сохранено в галерею")
+                }
+            } else {
+                print("Изображение не сохранено: \(String(describing: activityType))")
+            }
+        }
         present(activityVC, animated: true)
     }
     
-    @objc private func saveImageTapped() {
-        guard let image = imageView.image else { return }
-        
-        UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
-    }
-    
-    @objc private func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
-        let alert = UIAlertController(title: nil, message: error == nil ? "Фото сохранено!" : "Ошибка сохранения", preferredStyle: .alert)
+    private func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default))
-        present(alert, animated: true)
+        DispatchQueue.main.async {
+            self.present(alert, animated: true)
+        }
     }
 }
